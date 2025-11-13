@@ -12,9 +12,11 @@ type Toks = List[String]
 def split(s: String) : Toks = s.split(" ").toList
 
 // left- and right-associativity
-abstract class Assoc
-case object LA extends Assoc
-case object RA extends Assoc
+enum Assoc {
+  case LA 
+  case RA 
+}
+import Assoc._
 
 
 // power is right-associative,

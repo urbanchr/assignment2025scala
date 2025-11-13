@@ -28,11 +28,11 @@ def removeN[A](xs: List[A], elem: A, n: Int) : List[A] = ???
 // removeN(List(1,2,3,2,1), 0, 2)  // => List(1, 2, 3, 2, 1)
 
 // (3)
-abstract class Tip
-case object Absent extends Tip
-case object Present extends Tip
-case object Correct extends Tip
-
+enum Tip {
+  case Absent
+  case Present
+  case Correct 
+}
 
 def pool(secret: String, word: String) : List[Char] = ??? 
 
